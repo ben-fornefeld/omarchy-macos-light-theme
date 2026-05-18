@@ -1,0 +1,7 @@
+/* macOS 2026 "Tahoe" Light — OSD */
+
+@define-color background-color rgba(255, 255, 255, 0.88);
+@define-color border-color rgba(0, 0, 0, 0.10);
+@define-color label #1C1C1E;
+@define-color image #1C1C1E;
+@define-color progress #636366;

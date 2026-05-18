@@ -1,0 +1,110 @@
+/* macOS 2026 "Tahoe" Light — launcher (Spotlight) */
+
+@define-color foreground #1C1C1E;
+@define-color muted rgba(60, 60, 67, 0.60);
+@define-color background #FFFFFF;
+@define-color glass rgba(255, 255, 255, 0.72);
+@define-color hover rgba(0, 0, 0, 0.06);
+@define-color selected rgba(0, 0, 0, 0.08);
+@define-color hairline rgba(0, 0, 0, 0.08);
+@define-color accent #636366;
+
+@define-color selected-text #1C1C1E;
+@define-color text #1C1C1E;
+@define-color base #FFFFFF;
+@define-color border rgba(0, 0, 0, 0.10);
+
+window {
+  background: transparent;
+  border-radius: 14px;
+}
+
+window .box-wrapper {
+  background: @glass;
+  color: @text;
+  border: 1px solid @hairline;
+  border-radius: 14px;
+  padding: 10px;
+  margin: 0;
+}
+
+window .search-container,
+window .search {
+  background: rgba(0, 0, 0, 0.04);
+  color: @foreground;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 4px 2px 8px 2px;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+window .search:focus {
+  border-color: rgba(99, 99, 102, 0.6);
+  outline: none;
+}
+
+window .bar,
+window .scroll,
+window .list {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+window child {
+  background: transparent;
+  color: @muted;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 2px 2px;
+  min-height: 40px;
+  transition:
+    background-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms ease;
+}
+
+window child:hover {
+  background: @hover;
+  color: @foreground;
+}
+
+window child:selected,
+window child:focus,
+window child:checked {
+  background: @selected;
+  color: @foreground;
+  font-weight: 600;
+}
+
+window child:active {
+  background: rgba(0, 0, 0, 0.14);
+  color: @foreground;
+}
+
+window .item-box .title {
+  color: @foreground;
+  font-family: 'SF Pro Text', 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+window child:selected .title,
+window child:focus .title {
+  color: @foreground;
+  font-weight: 600;
+}
+
+window .item-box .subtitle {
+  color: @muted;
+  font-size: 11px;
+}
+
+window .item-box .icon {
+  -gtk-icon-size: 22px;
+  margin-right: 10px;
+}

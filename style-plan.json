@@ -1,0 +1,156 @@
+{
+  "$schema": "omarchy-theme-plan/v1",
+  "name": "macOS 2026 Light",
+  "slug": "macos-2026-light",
+  "mode": "light",
+  "parent": "macos-2026",
+  "description": "Light-mode companion to macos-2026. Same Liquid Glass language (squircle rounding, heavy blur, spring animations, metallic chromatic accent), inverted for bright backgrounds. Shares motion curves, typography, and geometry with the dark theme; only color + opacity values differ.",
+
+  "inherits_from_parent": [
+    "typography",
+    "geometry",
+    "motion",
+    "hyprland.decoration.rounding",
+    "hyprland.decoration.rounding_power",
+    "hyprland.decoration.blur.size",
+    "hyprland.decoration.blur.passes",
+    "hyprland.general.gaps_in",
+    "hyprland.general.gaps_out",
+    "hyprland.layer_rules_blur"
+  ],
+
+  "palette": {
+    "semantic": {
+      "background_primary":   "#FFFFFF",
+      "background_secondary": "#F2F2F7",
+      "background_tertiary":  "#E5E5EA",
+      "surface_elevated":     "#FFFFFF",
+      "surface_glass":         "rgba(255,255,255,0.72)",
+      "separator":            "rgba(60,60,67,0.29)",
+      "separator_opaque":     "#C6C6C8",
+      "label_primary":        "#1C1C1E",
+      "label_secondary":      "rgba(60,60,67,0.60)",
+      "label_tertiary":       "rgba(60,60,67,0.30)",
+      "label_quaternary":     "rgba(60,60,67,0.18)",
+      "fill_primary":         "rgba(120,120,128,0.20)",
+      "fill_secondary":       "rgba(120,120,128,0.16)",
+      "fill_tertiary":        "rgba(118,118,128,0.12)",
+      "fill_quaternary":      "rgba(116,116,128,0.08)",
+      "accent":               "#636366",
+      "accent_hover":         "#8E8E93",
+      "accent_gradient_stops":["#8E8E93", "#6E6E73", "#4A4A4C"],
+      "accent_gradient_alpha":[0.50, 0.50, 0.40],
+      "accent_gradient_angle_deg": 135,
+      "_accent_note": "Metallic chromatic sheen, shifted darker (graphite range) so the border remains readable against bright window content."
+    },
+    "system_colors_light": {
+      "red":     "#FF3B30",
+      "orange":  "#FF9500",
+      "yellow":  "#FFCC00",
+      "green":   "#34C759",
+      "mint":    "#00C7BE",
+      "teal":    "#30B0C7",
+      "cyan":    "#32ADE6",
+      "blue":    "#007AFF",
+      "indigo":  "#5856D6",
+      "purple":  "#AF52DE",
+      "pink":    "#FF2D55",
+      "brown":   "#A2845E"
+    },
+    "ansi_16": {
+      "color0":  "#FFFFFF",
+      "color1":  "#FF3B30",
+      "color2":  "#34C759",
+      "color3":  "#FFCC00",
+      "color4":  "#FF2D55",
+      "color5":  "#AF52DE",
+      "color6":  "#32ADE6",
+      "color7":  "#1C1C1E",
+      "color8":  "#8E8E93",
+      "color9":  "#FF6961",
+      "color10": "#5DE396",
+      "color11": "#FFE066",
+      "color12": "#FF6B9A",
+      "color13": "#DA8FFF",
+      "color14": "#8FE1FF",
+      "color15": "#000000"
+    }
+  },
+
+  "hyprland_overrides": {
+    "decoration": {
+      "active_opacity": 0.98,
+      "inactive_opacity": 0.93,
+      "blur": {
+        "contrast": 1.05,
+        "brightness": 1.05,
+        "vibrancy": 0.20,
+        "vibrancy_darkness": 0.0,
+        "noise": 0.02
+      },
+      "shadow": {
+        "color_active_rgba": "rgba(00000033)",
+        "color_inactive_rgba": "rgba(0000001C)"
+      }
+    },
+    "general": {
+      "col_active_border_rgba": "rgba(8E8E9380) rgba(6E6E7380) rgba(4A4A4C66) 135deg",
+      "col_inactive_border_rgba": "rgba(00000012)"
+    },
+    "misc": {
+      "background_color_rgba": "rgb(FFFFFF)"
+    }
+  },
+
+  "components": {
+    "menu_bar": {
+      "mapping": "Waybar (top)",
+      "background_css": "transparent",
+      "text_color": "#1C1C1E",
+      "text_shadow_css": "0 0 1px rgba(255,255,255,0.5)",
+      "muted_color": "rgba(60,60,67,0.60)",
+      "pill_bg_hover": "rgba(0,0,0,0.08)",
+      "pill_bg_active": "rgba(0,0,0,0.12)"
+    },
+    "launcher": {
+      "mapping": "Walker",
+      "background_css": "rgba(255,255,255,0.72)",
+      "border_css": "1px solid rgba(0,0,0,0.08)",
+      "item_hover_bg": "rgba(0,0,0,0.06)",
+      "item_selected_bg": "rgba(0,0,0,0.08)"
+    },
+    "notifications": {
+      "mapping": "Mako",
+      "background": "rgba(255,255,255,0.80)",
+      "border": "rgba(0,0,0,0.08)",
+      "text": "#1C1C1E",
+      "progress": "#636366"
+    },
+    "lock_screen": {
+      "mapping": "Hyprlock",
+      "font_color": "#1C1C1E",
+      "check_color": "#636366"
+    },
+    "terminal": {
+      "window_opacity_active": 0.82,
+      "window_opacity_inactive": 0.75,
+      "_opacity_note": "Less transparent than dark variant — light text on a barely-tinted bg needs more opacity to stay readable."
+    },
+    "osd": {
+      "background": "rgba(255,255,255,0.88)",
+      "border": "#1C1C1E",
+      "progress": "#636366"
+    }
+  },
+
+  "apps": {
+    "vscode":  { "name": "Default Light Modern", "extension": "" },
+    "neovim":  { "plugin": "folke/tokyonight.nvim", "colorscheme": "tokyonight-day" },
+    "icons":   { "primary": "Yaru", "fallback": "Papirus-Light" }
+  },
+
+  "light_mode_marker": {
+    "file": "light.mode",
+    "effect": "omarchy-theme-set-gnome sets color-scheme=prefer-light and gtk-theme=Adwaita"
+  }
+}

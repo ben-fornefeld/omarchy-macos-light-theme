@@ -1,0 +1,32 @@
+# macOS 2026 "Tahoe" Light — Liquid Glass palette
+# Source of truth: style-plan.json
+
+# Metallic chromatic accent shifted darker so it reads on white backgrounds
+accent = "#636366"
+cursor = "#1C1C1E"
+
+foreground = "#1C1C1E"
+background = "#FFFFFF"
+
+selection_foreground = "#FFFFFF"
+selection_background = "#636366"
+
+# ANSI 0-7
+color0 = "#FFFFFF"
+color1 = "#FF3B30"
+color2 = "#34C759"
+color3 = "#FFCC00"
+color4 = "#FF2D55"
+color5 = "#AF52DE"
+color6 = "#32ADE6"
+color7 = "#1C1C1E"
+
+# ANSI 8-15 (bright)
+color8  = "#8E8E93"
+color9  = "#FF6961"
+color10 = "#5DE396"
+color11 = "#FFE066"
+color12 = "#FF6B9A"
+color13 = "#DA8FFF"
+color14 = "#8FE1FF"
+color15 = "#000000"
