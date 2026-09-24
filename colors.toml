@@ -5,6 +5,11 @@
 accent = "#636366"
 cursor = "#1C1C1E"
 
+# Hyprland consumes these directly when this theme is applied. Keep window
+# chrome neutral and quiet rather than reusing the darker graphite accent.
+hyprland_active_border = "rgba(0000001A)"
+hyprland_inactive_border = "rgba(0000000F)"
+
 foreground = "#1C1C1E"
 background = "#FFFFFF"
 
